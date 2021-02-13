@@ -5,4 +5,4 @@
 layout: home
 ---
 
-<a href="./wanderpark.html">wanderpark</a>
+<h1><a href="./wanderpark.html">FolloworAvoid</a></h1>

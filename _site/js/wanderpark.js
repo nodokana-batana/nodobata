@@ -63,10 +63,18 @@ class Movement {
         }
 
 
-        document.addEventListener("mousemove", (event) => {
-            this.mouseX = event.clientX;
-            this.mouseY = event.clientY;
-        });
+        if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+            document.addEventListener("touchmove", (event) => {
+                this.mouseX = event.touches[0].clientX;
+                this.mouseY = event.touches[0].clientY;
+            });
+        } else {
+            document.addEventListener("mousemove", (event) => {
+                this.mouseX = event.clientX;
+                this.mouseY = event.clientY;
+            });
+        
+        }
     }
 
     follow() 
@@ -153,18 +161,18 @@ class Movement {
                 this.current_ballsX[0] += this.current_ballsVelX[0];
                 this.current_ballsY[0] += this.current_ballsVelY[0];
             }
-            if (this.current_ballsX[0] < 0) {
+            if (this.current_ballsX[0] < 20) {
                 this.current_ballsY[0] += Math.ceil((Math.random() - 0.5) * 10);
                 this.current_ballsX[0] = window.innerWidth-300;
             }
-            if (this.current_ballsX[0] > window.innerWidth) {
+            if (this.current_ballsX[0] > window.innerWidth - 20) {
                 this.current_ballsY[0] += Math.ceil((Math.random() - 0.5) * 10);
                 this.current_ballsX[0] = 300;
             }
-            if (this.current_ballsY[0] < 0) {
+            if (this.current_ballsY[0] < 20) {
                 this.current_ballsY[0] = window.innerHeight - 300;
             }
-            if (this.current_ballsY[0] > window.innerHeight) {
+            if (this.current_ballsY[0] > window.innerHeight - 20) {
                 this.current_ballsY[0] = 300;
             }
             balls[0].style.transform = `translate(${this.current_ballsX[0]}px, ${this.current_ballsY[0]}px)`;
@@ -188,18 +196,18 @@ class Movement {
                     this.current_ballsX[i] += this.current_ballsVelX[i];
                     this.current_ballsY[i] += this.current_ballsVelY[i];
                 }
-                if (this.current_ballsX[i] < 0) {
+                if (this.current_ballsX[i] < 20) {
                     this.current_ballsY[i] += Math.ceil((Math.random() - 0.5) * 10);
                     this.current_ballsX[i] = window.innerWidth-300;
                 }
-                if (this.current_ballsX[i] > window.innerWidth) {
+                if (this.current_ballsX[i] > window.innerWidth - 20) {
                     this.current_ballsY[i] += Math.ceil((Math.random() - 0.5) * 10);
                     this.current_ballsX[i] = 300;
                 }
-                if (this.current_ballsY[i] < 0) {
+                if (this.current_ballsY[i] < 20) {
                     this.current_ballsY[i] = window.innerHeight - 300;
                 }
-                if (this.current_ballsY[i] > window.innerHeight) {
+                if (this.current_ballsY[i] > window.innerHeight - 20) {
                     this.current_ballsY[i] = 300;
                 }
                 balls[i].style.transform = `translate(${this.current_ballsX[i]}px, ${this.current_ballsY[i]}px)`;
