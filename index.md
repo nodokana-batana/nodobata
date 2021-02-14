@@ -6,3 +6,5 @@ layout: home
 ---
 
 <h1><a href="./wanderpark.html">FolloworAvoid</a></h1>
+<h1><a href="./waves.html">Waves</a></h1>
+<h1><a href="./blocks.html">Blocks</a></h1>
