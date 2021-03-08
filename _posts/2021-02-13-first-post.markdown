@@ -18,4 +18,5 @@ categories: jekyll update
 <img src="/images/Birds/Isohiyodori.JPG" />
 <h1>ホオジロ - 頬白</h1>
 <img src="/images/Birds/Hoojiro.JPG" />
-
+<h1>ヤマガラ - 山雀</h1>
+<img src="/images/Birds/Yamagara.JPG" />

@@ -4,7 +4,11 @@
 
 layout: home
 ---
+<ul>
+    <li><a href="./index.html"><h1>Home</h1></a></li>
+    <li><a href="./wanderpark.html"><h1>FolloworAvoid</h1></a></li>
+    <li><a href="./waves.html"><h1>Waves</h1></a></li>
+    <li><a href="./blocks.html"><h1>Blocks</h1></a></li>
+    <li><a href="./blocks.html"><h1>Blender</h1></a></li>
+</ul>
 
-<h1><a href="./wanderpark.html">FolloworAvoid</a></h1>
-<h1><a href="./waves.html">Waves</a></h1>
-<h1><a href="./blocks.html">Blocks</a></h1>
