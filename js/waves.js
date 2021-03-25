@@ -2,7 +2,7 @@
 function generateWave(posX, posY) {
     const wave = document.createElement("div");
     document.body.appendChild(wave);
-    wave.style.backgroundImage = "url(images/Wave2.png)";
+    wave.style.backgroundImage = "url(images/interacts/source/Wave2.png)";
     wave.style.backgroundSize = "cover";
     wave.style.transform = "scale(1)";
     wave.style.width = "20px";
