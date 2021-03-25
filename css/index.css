@@ -1,0 +1,66 @@
+html {
+    width : 100%;
+    margin : 0px;
+    padding : 0;
+}
+header {
+    text-align:center;
+    margin :0;
+    padding : 20px 0px;
+    width : 100%;
+    background-image: linear-gradient(#fef,#fff);
+}
+
+body {
+    width : 100%;
+    margin : 0px;
+    padding : 0;
+}
+
+body ul {
+    margin : 30px 0px;
+    padding : 5px;
+    border : 5px solid #66c;
+    border-color:#66c #fff;
+    background-color : #fff;
+}
+
+body ul li {
+    display : inline-block;
+}
+
+body ul li a {
+    text-decoration:none;
+}
+
+.smartlink {
+    margin : 15 13px;
+    padding : 20px 20px;
+    border : 6px solid #bbe;
+    border-radius : 12%;
+    color : black;
+}
+
+.smartlink:hover {
+    margin : 5 3px;
+    padding : 30px 30px;
+    border : 6px solid #fee;
+    border-radius : 10%;
+    color : #ddd;
+    background-image : linear-gradient(#115,#226);
+}
+
+.floatingPicture {
+    width : 600px;
+    border : 12px solid #eca;
+    border-radius : 10%;
+}
+
+.smartarea {
+    width : 100%;
+}
+
+.title {
+    color : #6633aa;
+}
+

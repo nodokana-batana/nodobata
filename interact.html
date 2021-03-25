@@ -23,7 +23,6 @@
                 background-image:linear-gradient(#a54a,#a45a);
             }
         </style>
-
     </head>
     <body>
         <header>
@@ -33,24 +32,22 @@
                 <li><a href="./index.html"><h3 class="smartlink">Home</h3></a></li>
                 <li><a href="./interact.html"><h3 class="smartlink">Interact</h3></a></li>
                 <li><a href="./suisai.html"><h3 class="smartlink">水彩</h3></a></li>
-                <li><a href="./bread.html"><h3 class="smartlink">パン作り</h3></a></li>
+                <li><a href="./bread.html"><h3 class="smartlink">パン</h3></a></li>
                 <li><a href="./blender.html"><h3 class="smartlink">3DCG</h3></a></li>
             </ul>
         </header>
         <div class="section" id="sec1">
-            <h1><a href=interact.html>インタラクティブHTML</a></h1>
-            <div class="smartarea" id="1"> </div>
+            <h1><a href="waves.html">Wave</h1>
+            <div class="smartarea" id="1"></div>
         </div>
         <div class="section" id="sec2">
-            <h1><a href=suisai.html>水彩</a></h1>
-            <div class="smartarea" id="2"> </div>
+            <h1><a href="wanderpark.html">FollowOrAvoid</h1>
+            <div class="smartarea" id="2"></div>
         </div>
         <div class="section" id="sec3">
-            <h1><a href=interact.html>パン作り</a></h1>
-            <div class="smartarea" id="3"> </div>
+            <h1><a href="blocks.html">Blocks</h1>
+            <div class="smartarea" id="3"></div>
         </div>
-        
-
     </body>
     <script>
         function addPicture(file_name, area_id) {
@@ -62,12 +59,12 @@
             area.appendChild(image);
         }
         var float_pics = [
+            "./images/interacts/Wave.png",
             "./images/interacts/Follow.png",
-            "./images/suisai/kawasemi.jpg",
-            "./images/Bread/324/324_2.jpg",
-        ];
-        addPicture(float_pics[0], "sec1");
-        addPicture(float_pics[1], "sec2");
-        addPicture(float_pics[2], "sec3");
+            "./images/interacts/Blocks.png",
+            ]
+        addPicture(float_pics[0],"1");
+        addPicture(float_pics[1],"2");
+        addPicture(float_pics[2],"3");
     </script>
 </html>
