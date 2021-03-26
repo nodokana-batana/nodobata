@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <link rel="icon" href="images/index.png">
+        <link rel="stylesheet" href="./css/index.css">
+        <style>
+            .section {
+                text-align:center;
+            }
+            .section h1 a {
+                text-decoration = none;
+            }
+
+            .section {
+                width : 1400px;
+                padding : 10px 0px 30px;
+            }
+
+            .section:nth-child(even) {
+                margin:20px auto 20px 0 ;
+                border : 5px solid;
+                border-left: 0px;
+                border-color: #618;
+                border-radius:0% 40px 40px 0%;
+                background:#aaaa
+            }
+
+            .section:nth-child(odd) {
+                margin:20px 0px 20px auto;
+                border : 5px solid;
+                border-right: 0px;
+                border-color: #618;
+                border-radius: 40px 0 0 40px;
+                background:#ddda
+            }
+            #sec1 {
+                background-image:linear-gradient(#23a5,#32a5);
+            }
+            #sec2 {
+                background-image:linear-gradient(#4f55,#5e45);
+            }
+            #sec3 {
+                background-image:linear-gradient(#a545,#a455);
+            }
+            #sec4 {
+                background-image:linear-gradient(#2aa5,#3aa5);
+            }
+            #sec5 {
+                background-image:linear-gradient(#aa25,#aa35);
+            }
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <h2 class="title">のどかなバタナの</h2>
+            <h1 class="title">のどかなホームページ</h1>
+            <ul>
+                <li><a href="./index.html"><h3 class="smartlink">Home</h3></a></li>
+                <li><a href="./interact.html"><h3 class="smartlink">Interact</h3></a></li>
+                <li><a href="./suisai.html"><h3 class="smartlink">水彩</h3></a></li>
+                <li><a href="./bread.html"><h3 class="smartlink">パン作り</h3></a></li>
+                <li><a href="./blender.html"><h3 class="smartlink">3DCG</h3></a></li>
+                <li><a href="./cutart.html"><h3 class="smartlink">切り絵</h3></a></li>
+                <li><a href="./birds.html"><h3 class="smartlink">鳥図鑑</h3></a></li>
+            </ul>
+        </header>
+
+        <div class="section" id="sec1">
+            <div class="smartarea" id="1"> </div>
+        </div>
+        <div class="section" id="sec2">
+            <div class="smartarea" id="2"> </div>
+        </div>
+        <div class="section" id="sec3">
+            <div class="smartarea" id="3"> </div>
+        </div>
+        <div class="section" id="sec4">
+            <div class="smartarea" id="4"> </div>
+        </div>
+        <div class="section" id="sec5">
+            <div class="smartarea" id="5"> </div>
+        </div>
+        <div class="section" id="sec6">
+            <div class="smartarea" id="6"> </div>
+        </div>
+        <div class="section" id="sec7">
+            <div class="smartarea" id="7"> </div>
+        </div>
+        <div class="section" id="sec8">
+            <div class="smartarea" id="8"> </div>
+        </div>
+        <div class="section" id="sec9">
+            <div class="smartarea" id="9"> </div>
+        </div>
+        <div class="section" id="sec10">
+            <div class="smartarea" id="10"> </div>
+        </div>
+        <div class="section" id="sec11">
+            <div class="smartarea" id="11"> </div>
+        </div>
+        <div class="section" id="sec12">
+            <div class="smartarea" id="12"> </div>
+        </div>
+        <div class="section" id="sec13">
+            <div class="smartarea" id="13"> </div>
+        </div>
+        <div class="section" id="sec14">
+            <div class="smartarea" id="14"> </div>
+        </div>
+        <div class="section" id="sec15">
+            <div class="smartarea" id="15"> </div>
+        </div>
+        <div class="section" id="sec16">
+            <div class="smartarea" id="16"> </div>
+        </div>
+        <div class="section" id="sec17">
+            <div class="smartarea" id="17"> </div>
+        </div>
+        <div class="section" id="sec18">
+            <div class="smartarea" id="18"> </div>
+        </div>
+        <div class="section" id="sec19">
+            <div class="smartarea" id="19"> </div>
+        </div>
+        <div class="section" id="sec20">
+            <div class="smartarea" id="20"> </div>
+        </div>
+        <div class="section" id="sec21">
+            <div class="smartarea" id="21"> </div>
+        </div>
+        <div class="section" id="sec22">
+            <div class="smartarea" id="22"> </div>
+        </div>
+        <div class="section" id="sec23">
+            <div class="smartarea" id="23"> </div>
+        </div>
+        <div class="section" id="sec24">
+            <div class="smartarea" id="24"> </div>
+        </div>
+        <div class="section" id="sec25">
+            <div class="smartarea" id="25"> </div>
+        </div>
+        <div class="section" id="sec26">
+            <div class="smartarea" id="26"> </div>
+        </div>
+        <div class="section" id="sec27">
+            <div class="smartarea" id="27"> </div>
+        </div>
+        <div class="section" id="sec28">
+            <div class="smartarea" id="28"> </div>
+        </div>
+        <div class="section" id="sec29">
+            <div class="smartarea" id="29"> </div>
+        </div>
+    </body>
+    <script>
+
+        function addPicture(file_name, area_id) {
+            var image = document.createElement("img");
+            image.src = file_name;
+            image.classList.add("floatingPicture");
+
+            var area = document.getElementById(area_id);
+            area.appendChild(image);
+        }
+        var float_pics = [
+            "images/Birds/20200829_aosagi.JPG",
+            "images/Birds/20200923_kiseki.png",
+            "images/Birds/20201105_mejiro.JPG",
+            "images/Birds/20201215_karugamo.JPG",
+            "images/Birds/20201215_kosagi.JPG",
+            "images/Birds/20201227_kogera.JPG",
+            "images/Birds/20201227_segurosekirei.JPG",
+            "images/Birds/20201228_kijibato.JPG",
+            "images/Birds/20210105_hasibosogarasu.JPG",
+            "images/Birds/20210107_sirohara.JPG",
+            "images/Birds/20210107_suzume.JPG",
+            "images/Birds/20210110_hoojiro.JPG",
+            "images/Birds/20210113_hakusekirei.JPG",
+            "images/Birds/20210113_hiyodori.JPG",
+            "images/Birds/20210113_mozu.JPG",
+            "images/Birds/20210116_daisagi.JPG",
+            "images/Birds/20210116_wakakehonseiinko.JPG",
+            "images/Birds/20210202_tugumi.JPG",
+            "images/Birds/20210205_sijuukara.JPG",
+            "images/Birds/20210207_kawasemi.JPG",
+            "images/Birds/20210207_kotidori.JPG",
+            "images/Birds/20210213_kaituburi.JPG",
+            "images/Birds/20210213_magamo.JPG",
+            "images/Birds/20210303_hirenjaku.JPG",
+            "images/Birds/20210303_yamagara.JPG",
+            "images/Birds/20210314_kawarahiwa.JPG",
+            "images/Birds/20210314_sime.JPG",
+            "images/Birds/20210323_daisagi.JPG",
+            "images/Birds/20210323_isohiyodori.JPG",
+        ];
+        addPicture(float_pics[0], "sec1");
+        addPicture(float_pics[1], "sec2");
+        addPicture(float_pics[2], "sec3");
+        addPicture(float_pics[3], "sec4");
+        addPicture(float_pics[4], "sec5");
+        addPicture(float_pics[5], "sec6");
+        addPicture(float_pics[6], "sec7");
+        addPicture(float_pics[7], "sec8");
+        addPicture(float_pics[8], "sec9");
+        addPicture(float_pics[9], "sec10");
+        addPicture(float_pics[10], "sec11");
+        addPicture(float_pics[11], "sec12");
+        addPicture(float_pics[12], "sec13");
+        addPicture(float_pics[13], "sec14");
+        addPicture(float_pics[14], "sec15");
+        addPicture(float_pics[15], "sec16");
+        addPicture(float_pics[16], "sec17");
+        addPicture(float_pics[17], "sec18");
+        addPicture(float_pics[18], "sec19");
+        addPicture(float_pics[19], "sec20");
+        addPicture(float_pics[20], "sec21");
+        addPicture(float_pics[21], "sec22");
+        addPicture(float_pics[22], "sec23");
+        addPicture(float_pics[23], "sec24");
+        addPicture(float_pics[24], "sec25");
+        addPicture(float_pics[25], "sec26");
+        addPicture(float_pics[26], "sec27");
+        addPicture(float_pics[27], "sec28");
+        addPicture(float_pics[28], "sec29");
+    </script>
+</html>
