@@ -63,7 +63,7 @@ body ul li a {
 }
 
 .floatingPicture {
-    width : 600px;
+    width : 50%;
     border : 12px solid #eca;
     border-radius : 10%;
 }
