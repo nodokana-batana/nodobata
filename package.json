@@ -2,11 +2,11 @@
   "name": "nodobata-page",
   "version": "1.0.0",
   "description": "",
-  "main": "src/",
+  "main": "./",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode development"
-
+    "build": "webpack --mode development",
+    "start": "webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "babylonjs": "^6.24.0"
+    "babylonjs": "^6.24.0",
+    "webpack-dev-server": "^4.15.1"
   }
 }

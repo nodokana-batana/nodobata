@@ -1,37 +1,47 @@
 import * as BABYLON from 'babylonjs';
-
-// Get the canvas DOM element
+//let BABYLON = require('babylonjs');
+//let GUI = require('babylonjs-gui');
+//let materials = require('babylonjs-materials');
+var camera;
+var camera_speed = 0.005;
 var canvas = document.getElementById('renderCanvas');
-// Load the 3D engine
 var engine = new BABYLON.Engine(canvas, true, {preserveDrawingBuffer: true, stencil: true});
-// CreateScene function that creates and return the scene
 var createScene = function(){
-    // Create a basic BJS Scene object
     var scene = new BABYLON.Scene(engine);
-    // Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
-    var camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 5, -10), scene);
-    // Target the camera to scene origin
-    camera.setTarget(BABYLON.Vector3.Zero());
-    // Attach the camera to the canvas
+    camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 0.5, 0), scene);
+    camera.setTarget(new BABYLON.Vector3(0,0.5,1));
     camera.attachControl(canvas, false);
-    // Create a basic light, aiming 0, 1, 0 - meaning, to the sky
-    var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0, 1, 0), scene);
-    // Create a built-in "sphere" shape; its constructor takes 6 params: name, segment, diameter, scene, updatable, sideOrientation
-    var sphere = BABYLON.Mesh.CreateSphere('sphere1', 16, 2, scene, false, BABYLON.Mesh.FRONTSIDE);
-    // Move the sphere upward 1/2 of its height
-    sphere.position.y = 1;
-    // Create a built-in "ground" shape; its constructor takes 6 params : name, width, height, subdivision, scene, updatable
-    var ground = BABYLON.Mesh.CreateGround('ground1', 6, 6, 2, scene, false);
-    // Return the created scene
+    //const light = new BABYLON.PointLight("pointLight", new BABYLON.Vector3(0, 5, 1), scene);
+    //light.intensity = 2;
+	
+    const mats = [];
+    const planes = [];
+    for (var i = 0; i < 130; i++) {
+        var mat = new BABYLON.StandardMaterial("");
+	    //mat.diffuseTexture = new BABYLON.Texture("../images/low/600px_favorite-"+i+".JPG");
+	    mat.emissiveTexture = new BABYLON.Texture("../images/low/600px_favorite-"+i+".JPG");
+        mats.push(mat);
+        var plane = BABYLON.MeshBuilder.CreatePlane("plane", {height:1.5, width: 2});
+        plane.material = mat;
+        planes.push(plane);
+        var theta = 3.1415926535 * i / 5;
+        plane.position.x = Math.sin(theta) * 3;
+        plane.position.z = Math.cos(theta) * 3;
+        plane.position.y = (Math.floor(i / 10) - 6)*1.5;
+        plane.rotation.y = theta;
+    }
+
     return scene;
+
 }
-// call the createScene function
 var scene = createScene();
-// run the render loop
 engine.runRenderLoop(function(){
     scene.render();
+    camera.position.y += camera_speed;
+    if (camera.position.y > 9 || camera.position.y < -9) {
+        camera_speed *= -1;
+    }
 });
-// the canvas/window resize event handler
 window.addEventListener('resize', function(){
     engine.resize();
 });
