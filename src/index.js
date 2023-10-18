@@ -31,9 +31,16 @@ var createScene = function(){
         plane.rotation.y = theta;
     }
 
+    var floor = BABYLON.MeshBuilder.CreatePlane("floor", {height:10, width: 10});
+    floor.rotation.x = 1.57;
+    var mat = new BABYLON.StandardMaterial("");
+    mat.emissiveColor = new BABYLON.Color3(1,1,1);
+    floor.material = mat;
+
     return scene;
 
 }
+
 var scene = createScene();
 engine.runRenderLoop(function(){
     scene.render();
@@ -42,6 +49,7 @@ engine.runRenderLoop(function(){
         camera_speed *= -1;
     }
 });
+
 window.addEventListener('resize', function(){
     engine.resize();
 });
