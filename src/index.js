@@ -1,18 +1,17 @@
 import * as BABYLON from 'babylonjs';
+import { initCamera, updateCamera} from "./camera.js";
+import "@babylonjs/loaders/glTF";
 
 var camera;
 var camera_speed = 0.005;
 var canvas = document.getElementById('renderCanvas');
 var engine = new BABYLON.Engine(canvas, true, {preserveDrawingBuffer: true, stencil: true});
+
 var createScene = function(){
+    console.log("createScene");
     var scene = new BABYLON.Scene(engine);
-    camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 0.5, 0), scene);
-    camera.setTarget(new BABYLON.Vector3(0,0.5,1));
-    camera.minZ = 0.03;
-    camera.attachControl(canvas, false);
-    //const light = new BABYLON.PointLight("pointLight", new BABYLON.Vector3(0, 5, 1), scene);
-    //light.intensity = 2;
-	
+    camera = initCamera(scene, canvas);
+
     const mats = [];
     const planes = [];
     for (var i = 0; i < 130; i++) {
@@ -96,8 +95,6 @@ var createScene = function(){
     front_wall.material = door_mat;
     back_wall.material = door_mat;
     
-
-
     return scene;
 
 }
@@ -105,17 +102,7 @@ var createScene = function(){
 var scene = createScene();
 engine.runRenderLoop(function(){
     scene.render();
-    if (Math.abs(camera.rotation.y) > 2.641592) {
-        camera.position.z += -0.01;
-    } else if (Math.abs(camera.rotation.y) < 0.5){
-        camera.position.z += +0.01;
-    }
-    if (camera.position.z < -2) {
-        camera.position.z = 33;
-    } else if (camera.position.z > 33.5) {
-        camera.position.z = -1.5;
-    }
-
+    updateCamera(camera);
 });
 
 window.addEventListener('resize', function(){
