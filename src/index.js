@@ -1,6 +1,7 @@
 import * as BABYLON from 'babylonjs';
 import { initCamera, updateCamera} from "./camera.js";
-import "@babylonjs/loaders/glTF";
+import { initMonado } from "./monado.js"
+//import { initCathedoral } from "./cathedoral.js"
 
 var camera;
 var camera_speed = 0.005;
@@ -11,10 +12,28 @@ var createScene = function(){
     console.log("createScene");
     var scene = new BABYLON.Scene(engine);
     camera = initCamera(scene, canvas);
+    
+    initMonado(scene); 
+    //initCathedoral(scene);
+    //BABYLON.SceneLoader.ImportMesh("", "3d_assets/", "monado.babylon", scene, function (newMeshes) {
+    //    // Set the target of the camera to the first imported mesh
+    //    newMeshes[0].position.x = 1.5;
+    //    newMeshes[0].position.z = 15;
+    //    newMeshes[0].position.y = 1.0;
+
+    //    newMeshes[0].rotation.z = 1.57;
+
+    //    newMeshes[0].scaling.x = 0.10;
+    //    newMeshes[0].scaling.y = 0.10;
+    //    newMeshes[0].scaling.z = 0.10;
+    //    var light = new BABYLON.SpotLight("spotLight", new BABYLON.Vector3(1, 2, 15), new BABYLON.Vector3(1, -1, 0), Math.PI / 2, 5, scene);
+    //    light.diffuse = new BABYLON.Color3(1, 1, 1);
+    //    light.specular = new BABYLON.Color3(1, 1, 1);
+    //});
 
     const mats = [];
     const planes = [];
-    for (var i = 0; i < 130; i++) {
+    for (var i = 0; i < 40; i++) {
         var mat = new BABYLON.StandardMaterial("");
 	    //mat.diffuseTexture = new BABYLON.Texture("../images/low/600px_favorite-"+i+".JPG");
 	    mat.emissiveTexture = new BABYLON.Texture("../images/low/600px_favorite-"+i+".JPG");

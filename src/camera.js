@@ -1,8 +1,8 @@
 import * as BABYLON from 'babylonjs';
 
 export function initCamera(scene, canvas) {
-    const camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 0.5, 0), scene);
-    camera.setTarget(new BABYLON.Vector3(0,0.5,1));
+    const camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 1.2, 0), scene);
+    camera.setTarget(new BABYLON.Vector3(0,1.2,1));
     camera.minZ = 0.03;
     camera.attachControl(canvas, false);
     return camera;
