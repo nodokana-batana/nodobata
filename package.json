@@ -19,12 +19,13 @@
   },
   "homepage": "https://github.com/nodokana-batana/nodokana-batana.github.io#readme",
   "devDependencies": {
-    "@babylonjs/core": "^6.25.0",
-    "@babylonjs/loaders": "^6.25.0",
+    "@babylonjs/core": "^6.28.1",
+    "@babylonjs/loaders": "^6.28.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "babylon-vrm-loader": "^2.0.0",
     "babylonjs": "^6.24.0",
     "npm": "^10.2.1",
     "webpack-dev-server": "^4.15.1"
