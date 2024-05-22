@@ -83,7 +83,7 @@
                         vrm.scene.traverse( ( obj ) => {obj.frustumCulled = false;} );
                         VRMUtils.rotateVRM0( vrm );
                         loadFBX(currentAnimationUrl);
-                        loadMixamoAnimation( "./models/walk.fbx", currentVrm ).then( ( clip ) => {
+                        loadMixamoAnimation( "./models/walk2.fbx", currentVrm ).then( ( clip ) => {
                             walk_clip = clip;
                             currentMixer.clipAction( walk_clip ).play();
                             currentMixer.clipAction( walk_clip ).setEffectiveWeight(0);
